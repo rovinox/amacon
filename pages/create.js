@@ -46,8 +46,8 @@ function CreateProduct() {
   async function handleImageUpload() {
     const data = new FormData();
     data.append("file", product.media);
-    data.append("upload_preset", "reactreserve");
-    data.append("cloud_name", "reedbargercodes");
+    data.append("upload_preset", "amacon-preset");
+    data.append("cloud_name", "amacon");
     const response = await axios.post(process.env.CLOUDINARY_URL, data);
     const mediaUrl = response.data.url;
     return mediaUrl;
